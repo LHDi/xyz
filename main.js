@@ -148,7 +148,7 @@ renderer.render(scene, camera)
 
 requestAnimationFrame(render); */
 
-import * as THREE from './libraries/three.module.js';
+import * as THREE from './node_modules/three/build/three.module.js';
 const canvas = document.getElementById('c');
 const renderer = new THREE.WebGLRenderer({ canvas });
 const scene = new THREE.Scene();
@@ -182,7 +182,7 @@ const sphereGeometry = new THREE.SphereBufferGeometry(1, 50, 50);
     earthMesh.position.set(20, 0, 0)
     objects.push(earthMesh);
     Earth.add(earthMesh);
-    Earth.rotation.speed = .5
+    Earth.rotation.speed = .2
     objects.push(Earth);
     scene.add(Earth);
 }
@@ -196,7 +196,7 @@ const sphereGeometry = new THREE.SphereBufferGeometry(1, 50, 50);
     sunMaterial.emissiveMap = sunTexture;
     const sunMesh = new THREE.Mesh(sphereGeometry, sunMaterial);
     Sun.add(sunMesh);
-    sunMesh.rotation.speed = 0;
+    Sun.rotation.speed = '0';
     scene.add(Sun);
     objects.push(Sun);
 }
